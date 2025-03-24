@@ -1,7 +1,13 @@
 import './App.css'
+import Post from './components/Post.jsx'
 
 function App() {
-  return <h1>Hello World!</h1>;
+  return <main>
+    <Post/>
+    <Post/>
+    <Post/>
+    <Post/>
+  </main>;
 }
 
 export default App;
