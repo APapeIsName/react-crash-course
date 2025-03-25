@@ -1,4 +1,6 @@
 import { useState } from 'react';
+
+import Modal from "./Modal";
 import NewPost from "./NewPost";
 import Post from "./Post";
 import classes from './PostsList.module.css'
@@ -17,7 +19,12 @@ function PostsList() {
 
     return (
         <>
-            <NewPost onBodyChange={changeBodyHandler} onAuthorChange={changeAuthorHandler}/>
+            <Modal>
+                <NewPost 
+                    onBodyChange={changeBodyHandler} 
+                    onAuthorChange={changeAuthorHandler}
+                />
+            </Modal>
             <ul className={classes.posts}>
                 <Post author={enteredAuthor} body={enteredBody}/>
                 <Post author="Manual" body="Check out the full course!"/>
